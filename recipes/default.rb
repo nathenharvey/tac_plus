@@ -20,5 +20,5 @@ template '/etc/tac_plus.conf' do
   source 'tac_plus.conf.erb'
   owner 'root'
   group 'root'
-  mode '0640'
+  mode '0644'
 end

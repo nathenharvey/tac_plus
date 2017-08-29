@@ -15,3 +15,10 @@ end
 package 'tac_plus' do
   action :install
 end
+
+template '/etc/tac_plus.conf' do
+  source 'tac_plus.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0640'
+end

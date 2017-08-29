@@ -19,6 +19,10 @@ describe 'tac_plus::default' do
       expect { chef_run }.to_not raise_error
     end
 
+    it 'writes the tac_plus configuration file' do
+      expect(chef_run).to create_template '/etc/tac_plus.conf'
+    end
+
     it 'installs the tac_plus package' do
       expect(chef_run).to install_package 'tac_plus'
     end
